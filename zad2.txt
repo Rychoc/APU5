@@ -1,0 +1,261 @@
+
+> mac=read.csv("X:\AdamJuraszek\APU\APU5\Mackbooki.csv")
+BŁĄD: '\A' jest nierozponanym znakiem modyfikacji w łańcuchu tekstowym rozpoczynającym ""X:\A"
+> mac=read.csv("X:/AdamJuraszek/APU/APU5/Mackbooki.csv")
+> mac
+              nazwa ekran pamiec_RAM dysk  cena liczba_opinii ocena
+1    MacBook Air M1  13.3          8  256  4499            60   5.0
+2    MacBook Air M1  13.3         16  256  5899           104   5.0
+3    MacBook Air M1  13.3          8  256  4999            34   4.5
+4    MacBook Air M2  13.6          8  256  6999            13   3.0
+5    MacBook Air M1  13.3         16  256  6299            34   4.0
+6    MacBook Pro M2  13.3          8  256  7299             7   4.0
+7    MacBook Air M1  13.3          8  256  4999            43   3.5
+8    MacBook Air M2  13.6          8  256  6799            13   5.0
+9    MacBook Air M2  13.6         16  256  7199             5   5.0
+10 MacBook Pro 2023  14.2         16  512 11999             1   4.5
+11   MacBook Air M2  13.6          8  256  6999            13   4.0
+12 MacBook Pro 2023  16.2         32 1024 20999             0   0.0
+13   MacBook Air M2  13.6         16  256  7899             5   2.0
+14   MacBook Air M2  13.6          8  256  6749            13   3.5
+15   MacBook Air M1  13.3          8  256  4699            99   4.5
+           status_opinie
+1          50-100 opinii
+2  wiecej niz 100 opinii
+3        mniej 50 opinii
+4        mniej 50 opinii
+5        mniej 50 opinii
+6        mniej 50 opinii
+7        mniej 50 opinii
+8        mniej 50 opinii
+9        mniej 50 opinii
+10       mniej 50 opinii
+11       mniej 50 opinii
+12                nie ma
+13       mniej 50 opinii
+14       mniej 50 opinii
+15         50-100 opinii
+> mac$nazwa = factor(mac$nazwa)
+> mac$ocena = factor(mac$ocena)
+> summarizeColumns(mac)
+           name      type na       mean         disp median        mad    min
+1         nazwa    factor  0         NA    0.6000000     NA         NA    1.0
+2         ekran   numeric  0   13.67333    0.7401416   13.6    0.44478   13.3
+3    pamiec_RAM   integer  0   12.26667    6.6704751    8.0    0.00000    8.0
+4          dysk   integer  0  324.26667  204.4950110  256.0    0.00000  256.0
+5          cena   integer  0 7622.33333 4118.3763560 6799.0 1334.34000 4499.0
+6 liczba_opinii   integer  0   29.60000   33.8184227   13.0   17.79120    0.0
+7         ocena    factor  0         NA    0.7333333     NA         NA    1.0
+8 status_opinie character  0         NA    0.2666667     NA         NA    1.0
+      max nlevs
+1     6.0     4
+2    16.2     0
+3    32.0     0
+4  1024.0     0
+5 20999.0     0
+6   104.0     0
+7     4.0     7
+8    11.0     4
+> mac
+              nazwa ekran pamiec_RAM dysk  cena liczba_opinii ocena         status_opinie
+1    MacBook Air M1  13.3          8  256  4499            60     5         50-100 opinii
+2    MacBook Air M1  13.3         16  256  5899           104     5 wiecej niz 100 opinii
+3    MacBook Air M1  13.3          8  256  4999            34   4.5       mniej 50 opinii
+4    MacBook Air M2  13.6          8  256  6999            13     3       mniej 50 opinii
+5    MacBook Air M1  13.3         16  256  6299            34     4       mniej 50 opinii
+6    MacBook Pro M2  13.3          8  256  7299             7     4       mniej 50 opinii
+7    MacBook Air M1  13.3          8  256  4999            43   3.5       mniej 50 opinii
+8    MacBook Air M2  13.6          8  256  6799            13     5       mniej 50 opinii
+9    MacBook Air M2  13.6         16  256  7199             5     5       mniej 50 opinii
+10 MacBook Pro 2023  14.2         16  512 11999             1   4.5       mniej 50 opinii
+11   MacBook Air M2  13.6          8  256  6999            13     4       mniej 50 opinii
+12 MacBook Pro 2023  16.2         32 1024 20999             0     0                nie ma
+13   MacBook Air M2  13.6         16  256  7899             5     2       mniej 50 opinii
+14   MacBook Air M2  13.6          8  256  6749            13   3.5       mniej 50 opinii
+15   MacBook Air M1  13.3          8  256  4699            99   4.5         50-100 opinii
+
+> summarizeColumns(mac)
+           name      type na       mean         disp median        mad    min     max nlevs
+1         nazwa    factor  0         NA    0.6000000     NA         NA    1.0     6.0     4
+2         ekran   numeric  0   13.67333    0.7401416   13.6    0.44478   13.3    16.2     0
+3    pamiec_RAM   integer  0   12.26667    6.6704751    8.0    0.00000    8.0    32.0     0
+4          dysk   integer  0  324.26667  204.4950110  256.0    0.00000  256.0  1024.0     0
+5          cena   integer  0 7622.33333 4118.3763560 6799.0 1334.34000 4499.0 20999.0     0
+6 liczba_opinii   integer  0   29.60000   33.8184227   13.0   17.79120    0.0   104.0     0
+7         ocena    factor  0         NA    0.7333333     NA         NA    1.0     4.0     7
+8 status_opinie character  0         NA    0.2666667     NA         NA    1.0    11.0     4
+> 
+> desc = makeResampleDesc("CV", iters = 15)
+> task(task = makeClassifTask(id = deparse(substitute(s)), s, "ocena_klientow",
++                        weights = NULL, blocking = NULL, coordinates = NULL,
++ 
+BŁĄD: nieoczekiwany koniec wejścia
+> task = makeClassifTask(id = deparse(substitute(s)), s, "ocena_klientow",
++                        weights = NULL, blocking = NULL, coordinates = NULL,
++                        positive = NA_character_, fixup.data = "warn", check.data = TRUE)
+BŁĄD: nieoczekiwany koniec wejścia
+> task = makeClassifTask(id = deparse(substitute(mac)), mac, "ocena",
++                        weights = NULL, blocking = NULL, coordinates = NULL,
++                        positive = NA_character_, fixup.data = "warn", check.data = TRUE)
+Błąd w poleceniu '(function (cn, x) ':
+  Unsupported feature type (character) in column 'status_opinie'.
+
+> mac <- mac[1:7]
+> mac
+              nazwa ekran pamiec_RAM dysk  cena liczba_opinii ocena
+1    MacBook Air M1  13.3          8  256  4499            60     5
+2    MacBook Air M1  13.3         16  256  5899           104     5
+3    MacBook Air M1  13.3          8  256  4999            34   4.5
+4    MacBook Air M2  13.6          8  256  6999            13     3
+5    MacBook Air M1  13.3         16  256  6299            34     4
+6    MacBook Pro M2  13.3          8  256  7299             7     4
+7    MacBook Air M1  13.3          8  256  4999            43   3.5
+8    MacBook Air M2  13.6          8  256  6799            13     5
+9    MacBook Air M2  13.6         16  256  7199             5     5
+10 MacBook Pro 2023  14.2         16  512 11999             1   4.5
+11   MacBook Air M2  13.6          8  256  6999            13     4
+12 MacBook Pro 2023  16.2         32 1024 20999             0     0
+13   MacBook Air M2  13.6         16  256  7899             5     2
+14   MacBook Air M2  13.6          8  256  6749            13   3.5
+15   MacBook Air M1  13.3          8  256  4699            99   4.5
+
+> mac$nazwa = factor(mac$nazwa)
+> mac$ocena = factor(mac$ocena)
+
+> summarizeColumns(mac)
+           name    type na       mean         disp median        mad    min     max nlevs
+1         nazwa  factor  0         NA    0.6000000     NA         NA    1.0     6.0     4
+2         ekran numeric  0   13.67333    0.7401416   13.6    0.44478   13.3    16.2     0
+3    pamiec_RAM integer  0   12.26667    6.6704751    8.0    0.00000    8.0    32.0     0
+4          dysk integer  0  324.26667  204.4950110  256.0    0.00000  256.0  1024.0     0
+5          cena integer  0 7622.33333 4118.3763560 6799.0 1334.34000 4499.0 20999.0     0
+6 liczba_opinii integer  0   29.60000   33.8184227   13.0   17.79120    0.0   104.0     0
+7         ocena  factor  0         NA    0.7333333     NA         NA    1.0     4.0     7
+
+> desc = makeResampleDesc("CV", iters = 15)
+> task = makeClassifTask(id = deparse(substitute(mac)), mac, "ocena",
++                        weights = NULL, blocking = NULL, coordinates = NULL,
++                        positive = NA_character_, fixup.data = "warn", check.data = TRUE)
+
+> lrns <- makeLearners(c("rpart", "C50", "ctree", "naiveBayes", "randomForest"), type = "classif")
+
+> bmr <- benchmark(learners = lrns, tasks = task, desc, models = TRUE, measures = list(acc, ber))
+Task: mac, Learner: classif.rpart
+Resampling: cross-validation
+Measures:             acc       ber       
+[Resample] iter 1:    0.0000000      NaN  
+[Resample] iter 2:    0.0000000      NaN  
+[Resample] iter 3:    0.0000000      NaN  
+[Resample] iter 4:    0.0000000      NaN  
+[Resample] iter 5:    0.0000000      NaN  
+[Resample] iter 6:    0.0000000      NaN  
+[Resample] iter 7:    0.0000000      NaN  
+[Resample] iter 8:    0.0000000      NaN  
+[Resample] iter 9:    0.0000000      NaN  
+[Resample] iter 10:   0.0000000      NaN  
+[Resample] iter 11:   0.0000000      NaN  
+[Resample] iter 12:   0.0000000      NaN  
+[Resample] iter 13:   0.0000000      NaN  
+[Resample] iter 14:   0.0000000      NaN  
+[Resample] iter 15:   0.0000000      NaN  
+
+
+Aggregated Result: acc.test.mean=0.0000000,ber.test.mean=     NaN
+
+
+Task: mac, Learner: classif.C50
+Resampling: cross-validation
+Measures:             acc       ber       
+[Resample] iter 1:    0.0000000      NaN  
+[Resample] iter 2:    0.0000000      NaN  
+[Resample] iter 3:    0.0000000      NaN  
+[Resample] iter 4:    0.0000000      NaN  
+[Resample] iter 5:    0.0000000      NaN  
+[Resample] iter 6:    0.0000000      NaN  
+[Resample] iter 7:    0.0000000      NaN  
+[Resample] iter 8:    0.0000000      NaN  
+[Resample] iter 9:    0.0000000      NaN  
+[Resample] iter 10:   0.0000000      NaN  
+[Resample] iter 11:   0.0000000      NaN  
+[Resample] iter 12:   0.0000000      NaN  
+[Resample] iter 13:   0.0000000      NaN  
+[Resample] iter 14:   0.0000000      NaN  
+[Resample] iter 15:   0.0000000      NaN  
+
+
+Aggregated Result: acc.test.mean=0.0000000,ber.test.mean=     NaN
+
+
+Task: mac, Learner: classif.ctree
+Resampling: cross-validation
+Measures:             acc       ber       
+[Resample] iter 1:    0.0000000      NaN  
+[Resample] iter 2:    0.0000000      NaN  
+[Resample] iter 3:    0.0000000      NaN  
+[Resample] iter 4:    0.0000000      NaN  
+[Resample] iter 5:    0.0000000      NaN  
+[Resample] iter 6:    0.0000000      NaN  
+[Resample] iter 7:    0.0000000      NaN  
+[Resample] iter 8:    0.0000000      NaN  
+[Resample] iter 9:    0.0000000      NaN  
+[Resample] iter 10:   0.0000000      NaN  
+[Resample] iter 11:   0.0000000      NaN  
+[Resample] iter 12:   0.0000000      NaN  
+[Resample] iter 13:   0.0000000      NaN  
+[Resample] iter 14:   0.0000000      NaN  
+[Resample] iter 15:   0.0000000      NaN  
+
+
+Aggregated Result: acc.test.mean=0.0000000,ber.test.mean=     NaN
+
+
+Task: mac, Learner: classif.naiveBayes
+Resampling: cross-validation
+Measures:             acc       ber       
+[Resample] iter 1:    0.0000000      NaN  
+[Resample] iter 2:    0.0000000      NaN  
+[Resample] iter 3:    0.0000000      NaN  
+[Resample] iter 4:    0.0000000      NaN  
+[Resample] iter 5:    0.0000000      NaN  
+[Resample] iter 6:    0.0000000      NaN  
+[Resample] iter 7:    0.0000000      NaN  
+[Resample] iter 8:    0.0000000      NaN  
+[Resample] iter 9:    1.0000000      NaN  
+[Resample] iter 10:   0.0000000      NaN  
+[Resample] iter 11:   0.0000000      NaN  
+[Resample] iter 12:   0.0000000      NaN  
+[Resample] iter 13:   0.0000000      NaN  
+[Resample] iter 14:   0.0000000      NaN  
+[Resample] iter 15:   0.0000000      NaN  
+
+
+Aggregated Result: acc.test.mean=0.0666667,ber.test.mean=     NaN
+
+
+Task: mac, Learner: classif.randomForest
+Resampling: cross-validation
+Measures:             acc       ber       
+[Resample] iter 1:    0.0000000      NaN  
+[Resample] iter 2:    0.0000000      NaN  
+[Resample] iter 3:    0.0000000      NaN  
+[Resample] iter 4:    0.0000000      NaN  
+[Resample] iter 5:    0.0000000      NaN  
+[Resample] iter 6:    0.0000000      NaN  
+[Resample] iter 7:    0.0000000      NaN  
+[Resample] iter 8:    0.0000000      NaN  
+[Resample] iter 9:    0.0000000      NaN  
+[Resample] iter 10:   0.0000000      NaN  
+[Resample] iter 11:   0.0000000      NaN  
+[Resample] iter 12:   0.0000000      NaN  
+[Resample] iter 13:   0.0000000      NaN  
+[Resample] iter 14:   0.0000000      NaN  
+[Resample] iter 15:   0.0000000      NaN  
+
+
+Aggregated Result: acc.test.mean=0.0000000,ber.test.mean=     NaN
+
+
+> getbmr = getBMRPredictions(bmr)
+> plotBMRSummary(bmr)
+> save.image("X:\\AdamJuraszek\\APU\\APU5\\.RData")
+> 

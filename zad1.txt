@@ -1,0 +1,891 @@
+R version 4.2.2 (2022-10-31 ucrt) -- "Innocent and Trusting"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R jest oprogramowaniem darmowym i dostarczany jest BEZ JAKIEJKOLWIEK GWARANCJI.
+Możesz go rozpowszechniać pod pewnymi warunkami.
+Wpisz 'license()' lub 'licence()' aby uzyskać szczegóły dystrybucji.
+
+R jest projektem kolaboracyjnym z wieloma uczestnikami.
+Wpisz 'contributors()' aby uzyskać więcej informacji oraz
+'citation()' aby dowiedzieć się jak cytować R lub pakiety R w publikacjach.
+
+Wpisz 'demo()' aby zobaczyć demo, 'help()' aby uzyskać pomoc on-line, lub
+'help.start()' aby uzyskać pomoc w przeglądarce HTML.
+Wpisz 'q()' aby wyjść z R.
+
+Ostrzeżenie: przestrzeń nazw ‘data.tree’ nie jest dostępna, więc została zastąpiona przez '.GlobalEnv' podczas przetwarzania obiektu ‘macAhp’
+Ostrzeżenie: przestrzeń nazw ‘ahp’ nie jest dostępna, więc została zastąpiona przez '.GlobalEnv' podczas przetwarzania obiektu ‘macAhp’
+[Poprzednio zapisany obszar roboczy został przywrócony]
+
+> utils:::menuInstallPkgs()
+--- Proszę wybrać serwer lustrzany CRAN do użycia w tej sesji ---
+instalowanie dodatkowych zależności ‘TH.data’, ‘matrixStats’, ‘multcomp’, ‘modeltools’, ‘strucchange’, ‘coin’, ‘zoo’, ‘sandwich’
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/TH.data_1.1-2.zip'
+Content type 'application/zip' length 8825373 bytes (8.4 MB)
+downloaded 8.4 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/matrixStats_0.63.0.zip'
+Content type 'application/zip' length 505772 bytes (493 KB)
+downloaded 493 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/multcomp_1.4-23.zip'
+Content type 'application/zip' length 744975 bytes (727 KB)
+downloaded 727 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/modeltools_0.2-23.zip'
+Content type 'application/zip' length 208064 bytes (203 KB)
+downloaded 203 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/strucchange_1.5-3.zip'
+Content type 'application/zip' length 946970 bytes (924 KB)
+downloaded 924 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/coin_1.4-2.zip'
+Content type 'application/zip' length 1423740 bytes (1.4 MB)
+downloaded 1.4 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/zoo_1.8-12.zip'
+Content type 'application/zip' length 1021291 bytes (997 KB)
+downloaded 997 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/sandwich_3.0-2.zip'
+Content type 'application/zip' length 1453163 bytes (1.4 MB)
+downloaded 1.4 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/party_1.3-13.zip'
+Content type 'application/zip' length 894227 bytes (873 KB)
+downloaded 873 KB
+
+pakiet ‘TH.data’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘matrixStats’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘multcomp’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘modeltools’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘strucchange’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘coin’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘zoo’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘sandwich’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘party’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+
+Pobrane pakiety binarne są w
+        C:\Users\adamj\AppData\Local\Temp\RtmpcP0QA8\downloaded_packages
+> utils:::menuInstallPkgs()
+instalowanie dodatkowych zależności ‘proxy’
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/proxy_0.4-27.zip'
+Content type 'application/zip' length 180272 bytes (176 KB)
+downloaded 176 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/e1071_1.7-13.zip'
+Content type 'application/zip' length 652547 bytes (637 KB)
+downloaded 637 KB
+
+pakiet ‘proxy’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘e1071’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+
+Pobrane pakiety binarne są w
+        C:\Users\adamj\AppData\Local\Temp\RtmpcP0QA8\downloaded_packages
+> utils:::menuInstallPkgs()
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/randomForest_4.7-1.1.zip'
+Content type 'application/zip' length 222131 bytes (216 KB)
+downloaded 216 KB
+
+pakiet ‘randomForest’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+
+Pobrane pakiety binarne są w
+        C:\Users\adamj\AppData\Local\Temp\RtmpcP0QA8\downloaded_packages
+> utils:::menuInstallPkgs()
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/rFerns_5.0.0.zip'
+Content type 'application/zip' length 162655 bytes (158 KB)
+downloaded 158 KB
+
+pakiet ‘rFerns’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+
+Pobrane pakiety binarne są w
+        C:\Users\adamj\AppData\Local\Temp\RtmpcP0QA8\downloaded_packages
+> 
+> library("MASS")
+> library("dplyr")
+BŁĄD: ładowanie pakietu lub przestrzeni nazw nie powiodło się dla ‘dplyr’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ nie ma pakietu o nazwie ‘R6’
+Dodatkowo: Komunikat ostrzegawczy:
+pakiet ‘dplyr’ został zbudowany w wersji R 4.2.3 
+> library("party")
+Ładowanie wymaganego pakietu: grid
+Ładowanie wymaganego pakietu: mvtnorm
+Ładowanie wymaganego pakietu: modeltools
+Ładowanie wymaganego pakietu: stats4
+Ładowanie wymaganego pakietu: strucchange
+Ładowanie wymaganego pakietu: zoo
+
+Dołączanie pakietu: ‘zoo’
+
+Następujące obiekty zostały zakryte z ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Ładowanie wymaganego pakietu: sandwich
+Komunikaty ostrzegawcze:
+1: pakiet ‘party’ został zbudowany w wersji R 4.2.3 
+2: pakiet ‘strucchange’ został zbudowany w wersji R 4.2.3 
+3: pakiet ‘zoo’ został zbudowany w wersji R 4.2.3 
+4: pakiet ‘sandwich’ został zbudowany w wersji R 4.2.3 
+> library("mlr")
+Błąd w poleceniu 'library("mlr")':nie ma pakietu o nazwie ‘mlr’
+> utils:::menuInstallPkgs()
+instalowanie dodatkowych zależności ‘colorspace’, ‘utf8’, ‘farver’, ‘labeling’, ‘munsell’, ‘R6’, ‘RColorBrewer’, ‘viridisLite’, ‘fansi’, ‘magrittr’, ‘pillar’, ‘pkgconfig’, ‘fastmatch’, ‘cli’, ‘glue’, ‘gtable’, ‘isoband’, ‘lifecycle’, ‘scales’, ‘tibble’, ‘withr’, ‘ParamHelpers’, ‘backports’, ‘BBmisc’, ‘checkmate’, ‘data.table’, ‘ggplot2’, ‘parallelMap’, ‘XML’
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/colorspace_2.1-0.zip'
+Content type 'application/zip' length 2628979 bytes (2.5 MB)
+downloaded 2.5 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/utf8_1.2.3.zip'
+Content type 'application/zip' length 149970 bytes (146 KB)
+downloaded 146 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/farver_2.1.1.zip'
+Content type 'application/zip' length 1513315 bytes (1.4 MB)
+downloaded 1.4 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/labeling_0.4.2.zip'
+Content type 'application/zip' length 62511 bytes (61 KB)
+downloaded 61 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/munsell_0.5.0.zip'
+Content type 'application/zip' length 244919 bytes (239 KB)
+downloaded 239 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/R6_2.5.1.zip'
+Content type 'application/zip' length 84182 bytes (82 KB)
+downloaded 82 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/RColorBrewer_1.1-3.zip'
+Content type 'application/zip' length 55837 bytes (54 KB)
+downloaded 54 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/viridisLite_0.4.2.zip'
+Content type 'application/zip' length 1300084 bytes (1.2 MB)
+downloaded 1.2 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/fansi_1.0.4.zip'
+Content type 'application/zip' length 312681 bytes (305 KB)
+downloaded 305 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/magrittr_2.0.3.zip'
+Content type 'application/zip' length 227205 bytes (221 KB)
+downloaded 221 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/pillar_1.9.0.zip'
+Content type 'application/zip' length 659244 bytes (643 KB)
+downloaded 643 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/pkgconfig_2.0.3.zip'
+Content type 'application/zip' length 22301 bytes (21 KB)
+downloaded 21 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/fastmatch_1.1-3.zip'
+Content type 'application/zip' length 39902 bytes (38 KB)
+downloaded 38 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/cli_3.6.1.zip'
+Content type 'application/zip' length 1332117 bytes (1.3 MB)
+downloaded 1.3 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/glue_1.6.2.zip'
+Content type 'application/zip' length 161894 bytes (158 KB)
+downloaded 158 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/gtable_0.3.3.zip'
+Content type 'application/zip' length 225670 bytes (220 KB)
+downloaded 220 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/isoband_0.2.7.zip'
+Content type 'application/zip' length 1960710 bytes (1.9 MB)
+downloaded 1.9 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/lifecycle_1.0.3.zip'
+Content type 'application/zip' length 139155 bytes (135 KB)
+downloaded 135 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/scales_1.2.1.zip'
+Content type 'application/zip' length 616447 bytes (601 KB)
+downloaded 601 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/tibble_3.2.1.zip'
+Content type 'application/zip' length 690166 bytes (673 KB)
+downloaded 673 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/withr_2.5.0.zip'
+Content type 'application/zip' length 231805 bytes (226 KB)
+downloaded 226 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/ParamHelpers_1.14.1.zip'
+Content type 'application/zip' length 434241 bytes (424 KB)
+downloaded 424 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/backports_1.4.1.zip'
+Content type 'application/zip' length 102215 bytes (99 KB)
+downloaded 99 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/BBmisc_1.13.zip'
+Content type 'application/zip' length 314973 bytes (307 KB)
+downloaded 307 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/checkmate_2.2.0.zip'
+Content type 'application/zip' length 748673 bytes (731 KB)
+downloaded 731 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/data.table_1.14.8.zip'
+Content type 'application/zip' length 2277035 bytes (2.2 MB)
+downloaded 2.2 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/ggplot2_3.4.2.zip'
+Content type 'application/zip' length 4296981 bytes (4.1 MB)
+downloaded 4.1 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/parallelMap_1.5.1.zip'
+Content type 'application/zip' length 104611 bytes (102 KB)
+downloaded 102 KB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/XML_3.99-0.14.zip'
+Content type 'application/zip' length 3052886 bytes (2.9 MB)
+downloaded 2.9 MB
+
+próbowanie adresu URL 'https://mirrors.nic.cz/R/bin/windows/contrib/4.2/mlr_2.19.1.zip'
+Content type 'application/zip' length 4814843 bytes (4.6 MB)
+downloaded 4.6 MB
+
+pakiet ‘colorspace’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘utf8’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘farver’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘labeling’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘munsell’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘R6’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘RColorBrewer’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘viridisLite’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘fansi’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘magrittr’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘pillar’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘pkgconfig’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘fastmatch’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘cli’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘glue’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘gtable’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘isoband’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘lifecycle’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘scales’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘tibble’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘withr’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘ParamHelpers’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘backports’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘BBmisc’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘checkmate’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘data.table’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘ggplot2’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘parallelMap’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘XML’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+pakiet ‘mlr’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+
+Pobrane pakiety binarne są w
+        C:\Users\adamj\AppData\Local\Temp\RtmpcP0QA8\downloaded_packages
+> library("mlr")
+Ładowanie wymaganego pakietu: ParamHelpers
+Warning message: 'mlr' is in 'maintenance-only' mode since July 2019.
+Future development will only happen in 'mlr3'
+(<https://mlr3.mlr-org.com>). Due to the focus on 'mlr3' there might be
+uncaught bugs meanwhile in {mlr} - please consider switching.
+Komunikaty ostrzegawcze:
+1: pakiet ‘mlr’ został zbudowany w wersji R 4.2.3 
+2: pakiet ‘ParamHelpers’ został zbudowany w wersji R 4.2.3 
+> library("C50")
+Komunikat ostrzegawczy:
+pakiet ‘C50’ został zbudowany w wersji R 4.2.3 
+> library("rpart")
+> train <- force(infert)
+> train
+    education age parity induced case spontaneous stratum pooled.stratum
+1      0-5yrs  26      6       1    1           2       1              3
+2      0-5yrs  42      1       1    1           0       2              1
+3      0-5yrs  39      6       2    1           0       3              4
+4      0-5yrs  34      4       2    1           0       4              2
+5     6-11yrs  35      3       1    1           1       5             32
+6     6-11yrs  36      4       2    1           1       6             36
+7     6-11yrs  23      1       0    1           0       7              6
+8     6-11yrs  32      2       0    1           0       8             22
+9     6-11yrs  21      1       0    1           1       9              5
+10    6-11yrs  28      2       0    1           0      10             19
+11    6-11yrs  29      2       1    1           0      11             20
+12    6-11yrs  37      4       2    1           1      12             37
+13    6-11yrs  31      1       1    1           0      13              9
+14    6-11yrs  29      3       2    1           0      14             29
+15    6-11yrs  31      2       1    1           1      15             21
+16    6-11yrs  27      2       2    1           0      16             18
+17    6-11yrs  30      5       2    1           1      17             38
+18    6-11yrs  26      1       0    1           1      18              7
+19    6-11yrs  25      3       2    1           1      19             28
+20    6-11yrs  44      1       0    1           1      20             17
+21    6-11yrs  40      1       0    1           1      21             14
+22    6-11yrs  35      2       2    1           0      22             24
+23    6-11yrs  28      2       0    1           2      23             19
+24    6-11yrs  36      1       0    1           1      24             12
+25    6-11yrs  27      2       1    1           1      25             18
+26    6-11yrs  40      2       0    1           2      26             27
+27    6-11yrs  38      2       0    1           2      27             26
+28    6-11yrs  34      3       0    1           2      28             31
+29    6-11yrs  28      4       1    1           2      29             34
+30    6-11yrs  30      4       2    1           0      30             35
+31    6-11yrs  32      1       0    1           1      31             10
+32    6-11yrs  34      2       1    1           0      32             23
+33    6-11yrs  42      1       1    1           0      33             16
+34    6-11yrs  32      2       0    1           2      34             22
+35    6-11yrs  39      1       1    1           0      35             13
+36    6-11yrs  35      2       0    1           2      36             24
+37    6-11yrs  36      1       0    1           1      37             12
+38    6-11yrs  34      3       1    1           2      38             31
+39    6-11yrs  30      3       0    1           0      39             30
+40    6-11yrs  28      1       0    1           1      40              8
+41    6-11yrs  39      3       0    1           2      41             33
+42    6-11yrs  35      1       0    1           0      42             11
+43    6-11yrs  41      1       0    1           0      43             15
+44    6-11yrs  37      2       1    1           1      44             25
+45    12+ yrs  30      1       0    1           0      45             44
+46    12+ yrs  37      1       1    1           0      46             48
+47    12+ yrs  28      2       0    1           2      47             51
+48    12+ yrs  27      4       2    1           0      48             61
+49    12+ yrs  26      2       2    1           0      49             49
+50    12+ yrs  38      3       0    1           2      50             60
+51    12+ yrs  24      3       1    1           2      51             56
+52    12+ yrs  36      5       1    1           2      52             62
+53    12+ yrs  27      3       1    1           1      53             57
+54    12+ yrs  28      1       0    1           1      54             42
+55    12+ yrs  29      2       0    1           2      55             52
+56    12+ yrs  36      2       0    1           2      56             55
+57    12+ yrs  28      2       1    1           0      57             51
+58    12+ yrs  28      2       0    1           2      58             51
+59    12+ yrs  28      1       0    1           1      59             42
+60    12+ yrs  27      2       0    1           2      60             50
+61    12+ yrs  35      2       0    1           2      61             54
+62    12+ yrs  25      1       0    1           1      62             41
+63    12+ yrs  34      1       0    1           1      63             47
+64    12+ yrs  31      2       0    1           2      64             53
+65    12+ yrs  26      2       1    1           0      65             49
+66    12+ yrs  32      1       0    1           1      66             46
+67    12+ yrs  21      1       0    1           1      67             39
+68    12+ yrs  28      3       1    1           2      68             58
+69    12+ yrs  37      3       0    1           2      69             59
+70    12+ yrs  25      1       1    1           0      70             41
+71    12+ yrs  32      1       1    1           0      71             46
+72    12+ yrs  25      1       0    1           1      72             41
+73    12+ yrs  31      1       0    1           1      73             45
+74    12+ yrs  38      6       0    1           2      74             63
+75    12+ yrs  26      2       0    1           2      75             49
+76    12+ yrs  31      1       0    1           1      76             45
+77    12+ yrs  31      2       0    1           1      77             53
+78    12+ yrs  25      1       1    1           0      78             41
+79    12+ yrs  31      1       0    1           1      79             45
+80    12+ yrs  34      1       0    1           1      80             47
+81    12+ yrs  35      2       2    1           0      81             54
+82    12+ yrs  29      1       0    1           1      82             43
+83    12+ yrs  23      1       0    1           1      83             40
+84     0-5yrs  26      6       2    0           0       1              3
+85     0-5yrs  42      1       0    0           0       2              1
+86     0-5yrs  39      6       2    0           0       3              4
+87     0-5yrs  34      4       0    0           1       4              2
+88    6-11yrs  35      3       2    0           0       5             32
+89    6-11yrs  36      4       1    0           1       6             36
+90    6-11yrs  23      1       0    0           0       7              6
+91    6-11yrs  32      2       2    0           0       8             22
+92    6-11yrs  21      1       0    0           1       9              5
+93    6-11yrs  28      2       0    0           1      10             19
+94    6-11yrs  29      2       0    0           0      11             20
+95    6-11yrs  37      4       1    0           1      12             37
+96    6-11yrs  31      1       0    0           0      13              9
+97    6-11yrs  29      3       0    0           1      14             29
+98    6-11yrs  31      2       1    0           0      15             21
+99    6-11yrs  27      2       1    0           0      16             18
+100   6-11yrs  30      5       0    0           2      17             38
+101   6-11yrs  26      1       0    0           0      18              7
+102   6-11yrs  25      3       0    0           1      19             28
+103   6-11yrs  44      1       0    0           0      20             17
+104   6-11yrs  40      1       0    0           0      21             14
+105   6-11yrs  35      2       0    0           0      22             24
+106   6-11yrs  28      2       0    0           0      23             19
+107   6-11yrs  36      1       0    0           0      24             12
+108   6-11yrs  27      2       0    0           1      25             18
+109   6-11yrs  40      2       0    0           0      26             27
+110   6-11yrs  38      2       0    0           0      27             26
+111   6-11yrs  34      3       0    0           0      28             31
+112   6-11yrs  28      4       0    0           2      29             34
+113   6-11yrs  30      4       1    0           1      30             35
+114   6-11yrs  32      1       0    0           0      31             10
+115   6-11yrs  34      2       1    0           0      32             23
+116   6-11yrs  42      1       1    0           0      33             16
+117   6-11yrs  32      2       0    0           0      34             22
+118   6-11yrs  39      1       0    0           0      35             13
+119   6-11yrs  35      2       0    0           0      36             24
+120   6-11yrs  36      1       0    0           0      37             12
+121   6-11yrs  34      3       2    0           0      38             31
+122   6-11yrs  30      3       0    0           2      39             30
+123   6-11yrs  28      1       1    0           0      40              8
+124   6-11yrs  39      3       1    0           0      41             33
+125   6-11yrs  35      1       0    0           0      42             11
+126   6-11yrs  41      1       0    0           0      43             15
+127   6-11yrs  37      2       0    0           0      44             25
+128   12+ yrs  30      1       1    0           0      45             44
+129   12+ yrs  37      1       0    0           0      46             48
+130   12+ yrs  28      2       1    0           0      47             51
+131   12+ yrs  27      4       2    0           1      48             61
+132   12+ yrs  26      2       1    0           0      49             49
+133   12+ yrs  38      3       1    0           0      50             60
+134   12+ yrs  24      3       2    0           1      51             56
+135   12+ yrs  36      5       1    0           1      52             62
+136   12+ yrs  27      3       1    0           1      53             57
+137   12+ yrs  28      1       1    0           0      54             42
+138   12+ yrs  29      2       1    0           0      55             52
+139   12+ yrs  36      2       1    0           0      56             55
+140   12+ yrs  28      2       1    0           1      57             51
+141   12+ yrs  28      2       2    0           0      58             51
+142   12+ yrs  28      1       1    0           0      59             42
+143   12+ yrs  27      2       1    0           0      60             50
+144   12+ yrs  35      2       2    0           0      61             54
+145   12+ yrs  25      1       1    0           0      62             41
+146   12+ yrs  34      1       0    0           0      63             47
+147   12+ yrs  31      2       0    0           0      64             53
+148   12+ yrs  26      2       0    0           1      65             49
+149   12+ yrs  32      1       0    0           0      66             46
+150   12+ yrs  21      1       0    0           1      67             39
+151   12+ yrs  28      3       2    0           0      68             58
+152   12+ yrs  37      3       1    0           1      69             59
+153   12+ yrs  25      1       0    0           0      70             41
+154   12+ yrs  32      1       1    0           0      71             46
+155   12+ yrs  25      1       0    0           0      72             41
+156   12+ yrs  31      1       0    0           1      73             45
+157   12+ yrs  26      2       0    0           2      75             49
+158   12+ yrs  31      1       0    0           0      76             45
+159   12+ yrs  31      2       2    0           0      77             53
+160   12+ yrs  25      1       0    0           0      78             41
+161   12+ yrs  31      1       0    0           0      79             45
+162   12+ yrs  34      1       0    0           0      80             47
+163   12+ yrs  35      2       0    0           0      81             54
+164   12+ yrs  29      1       0    0           1      82             43
+165   12+ yrs  23      1       0    0           1      83             40
+166    0-5yrs  26      6       2    0           0       1              3
+167    0-5yrs  42      1       0    0           0       2              1
+168    0-5yrs  39      6       2    0           0       3              4
+169    0-5yrs  34      4       0    0           2       4              2
+170   6-11yrs  35      3       0    0           0       5             32
+171   6-11yrs  36      4       0    0           2       6             36
+172   6-11yrs  23      1       0    0           0       7              6
+173   6-11yrs  32      2       0    0           1       8             22
+174   6-11yrs  21      1       1    0           0       9              5
+175   6-11yrs  28      2       0    0           1      10             19
+176   6-11yrs  29      2       0    0           1      11             20
+177   6-11yrs  37      4       0    0           1      12             37
+178   6-11yrs  31      1       0    0           0      13              9
+179   6-11yrs  29      3       0    0           2      14             29
+180   6-11yrs  31      2       1    0           0      15             21
+181   6-11yrs  27      2       0    0           0      16             18
+182   6-11yrs  30      5       1    0           2      17             38
+183   6-11yrs  26      1       1    0           0      18              7
+184   6-11yrs  25      3       1    0           1      19             28
+185   6-11yrs  44      1       1    0           0      20             17
+186   6-11yrs  40      1       0    0           0      21             14
+187   6-11yrs  35      2       0    0           0      22             24
+188   6-11yrs  28      2       2    0           0      23             19
+189   6-11yrs  36      1       0    0           1      24             12
+190   6-11yrs  27      2       0    0           2      25             18
+191   6-11yrs  40      2       0    0           0      26             27
+192   6-11yrs  38      2       0    0           0      27             26
+193   6-11yrs  34      3       0    0           0      28             31
+194   6-11yrs  28      4       2    0           1      29             34
+195   6-11yrs  30      4       1    0           1      30             35
+196   6-11yrs  32      1       0    0           0      31             10
+197   6-11yrs  34      2       0    0           0      32             23
+198   6-11yrs  42      1       0    0           0      33             16
+199   6-11yrs  32      2       2    0           0      34             22
+200   6-11yrs  39      1       0    0           0      35             13
+201   6-11yrs  35      2       0    0           0      36             24
+202   6-11yrs  36      1       0    0           0      37             12
+203   6-11yrs  34      3       2    0           0      38             31
+204   6-11yrs  30      3       0    0           1      39             30
+205   6-11yrs  28      1       0    0           0      40              8
+206   6-11yrs  39      3       0    0           0      41             33
+207   6-11yrs  35      1       0    0           0      42             11
+208   6-11yrs  41      1       0    0           0      43             15
+209   6-11yrs  37      2       0    0           0      44             25
+210   12+ yrs  30      1       0    0           0      45             44
+211   12+ yrs  37      1       0    0           1      46             48
+212   12+ yrs  28      2       1    0           0      47             51
+213   12+ yrs  27      4       2    0           0      48             61
+214   12+ yrs  26      2       1    0           0      49             49
+215   12+ yrs  38      3       1    0           0      50             60
+216   12+ yrs  24      3       2    0           0      51             56
+217   12+ yrs  36      5       2    0           1      52             62
+218   12+ yrs  27      3       2    0           0      53             57
+219   12+ yrs  28      1       0    0           1      54             42
+220   12+ yrs  29      2       1    0           1      55             52
+221   12+ yrs  36      2       0    0           1      56             55
+222   12+ yrs  28      2       2    0           0      57             51
+223   12+ yrs  28      2       1    0           0      58             51
+224   12+ yrs  28      1       0    0           0      59             42
+225   12+ yrs  27      2       1    0           0      60             50
+226   12+ yrs  35      2       1    0           0      61             54
+227   12+ yrs  25      1       1    0           0      62             41
+228   12+ yrs  34      1       0    0           0      63             47
+229   12+ yrs  31      2       1    0           0      64             53
+230   12+ yrs  26      2       0    0           2      65             49
+231   12+ yrs  32      1       1    0           0      66             46
+232   12+ yrs  21      1       0    0           0      67             39
+233   12+ yrs  28      3       2    0           0      68             58
+234   12+ yrs  37      3       0    0           2      69             59
+235   12+ yrs  25      1       1    0           0      70             41
+236   12+ yrs  32      1       0    0           0      71             46
+237   12+ yrs  25      1       1    0           0      72             41
+238   12+ yrs  31      1       0    0           0      73             45
+239   12+ yrs  38      6       0    0           2      74             63
+240   12+ yrs  26      2       1    0           1      75             49
+241   12+ yrs  31      1       1    0           0      76             45
+242   12+ yrs  31      2       0    0           1      77             53
+243   12+ yrs  25      1       0    0           1      78             41
+244   12+ yrs  31      1       0    0           1      79             45
+245   12+ yrs  34      1       0    0           0      80             47
+246   12+ yrs  35      2       2    0           0      81             54
+247   12+ yrs  29      1       0    0           1      82             43
+248   12+ yrs  23      1       0    0           1      83             40
+> summarizeColumns(train)
+            name    type na       mean       disp median     mad min max nlevs
+1      education  factor  0         NA  0.5161290     NA      NA  12 120     3
+2            age numeric  0 31.5040323  5.2515646     31  5.9304  21  44     0
+3         parity numeric  0  2.0927419  1.2515043      2  1.4826   1   6     0
+4        induced numeric  0  0.5725806  0.7384565      0  0.0000   0   2     0
+5           case numeric  0  0.3346774  0.4728318      0  0.0000   0   1     0
+6    spontaneous numeric  0  0.5766129  0.7325413      0  0.0000   0   2     0
+7        stratum integer  0 41.8709677 23.9684231     42 31.1346   1  83     0
+8 pooled.stratum numeric  0 33.5806452 17.2721004     36 20.7564   1  63     0
+> data <- c("training", "test")
+> data
+[1] "training" "test"    
+> splitData <-  split(train, data)
+> splitData
+$test
+    education age parity induced case spontaneous stratum pooled.stratum
+2      0-5yrs  42      1       1    1           0       2              1
+4      0-5yrs  34      4       2    1           0       4              2
+6     6-11yrs  36      4       2    1           1       6             36
+8     6-11yrs  32      2       0    1           0       8             22
+10    6-11yrs  28      2       0    1           0      10             19
+12    6-11yrs  37      4       2    1           1      12             37
+14    6-11yrs  29      3       2    1           0      14             29
+16    6-11yrs  27      2       2    1           0      16             18
+18    6-11yrs  26      1       0    1           1      18              7
+20    6-11yrs  44      1       0    1           1      20             17
+22    6-11yrs  35      2       2    1           0      22             24
+24    6-11yrs  36      1       0    1           1      24             12
+26    6-11yrs  40      2       0    1           2      26             27
+28    6-11yrs  34      3       0    1           2      28             31
+30    6-11yrs  30      4       2    1           0      30             35
+32    6-11yrs  34      2       1    1           0      32             23
+34    6-11yrs  32      2       0    1           2      34             22
+36    6-11yrs  35      2       0    1           2      36             24
+38    6-11yrs  34      3       1    1           2      38             31
+40    6-11yrs  28      1       0    1           1      40              8
+42    6-11yrs  35      1       0    1           0      42             11
+44    6-11yrs  37      2       1    1           1      44             25
+46    12+ yrs  37      1       1    1           0      46             48
+48    12+ yrs  27      4       2    1           0      48             61
+50    12+ yrs  38      3       0    1           2      50             60
+52    12+ yrs  36      5       1    1           2      52             62
+54    12+ yrs  28      1       0    1           1      54             42
+56    12+ yrs  36      2       0    1           2      56             55
+58    12+ yrs  28      2       0    1           2      58             51
+60    12+ yrs  27      2       0    1           2      60             50
+62    12+ yrs  25      1       0    1           1      62             41
+64    12+ yrs  31      2       0    1           2      64             53
+66    12+ yrs  32      1       0    1           1      66             46
+68    12+ yrs  28      3       1    1           2      68             58
+70    12+ yrs  25      1       1    1           0      70             41
+72    12+ yrs  25      1       0    1           1      72             41
+74    12+ yrs  38      6       0    1           2      74             63
+76    12+ yrs  31      1       0    1           1      76             45
+78    12+ yrs  25      1       1    1           0      78             41
+80    12+ yrs  34      1       0    1           1      80             47
+82    12+ yrs  29      1       0    1           1      82             43
+84     0-5yrs  26      6       2    0           0       1              3
+86     0-5yrs  39      6       2    0           0       3              4
+88    6-11yrs  35      3       2    0           0       5             32
+90    6-11yrs  23      1       0    0           0       7              6
+92    6-11yrs  21      1       0    0           1       9              5
+94    6-11yrs  29      2       0    0           0      11             20
+96    6-11yrs  31      1       0    0           0      13              9
+98    6-11yrs  31      2       1    0           0      15             21
+100   6-11yrs  30      5       0    0           2      17             38
+102   6-11yrs  25      3       0    0           1      19             28
+104   6-11yrs  40      1       0    0           0      21             14
+106   6-11yrs  28      2       0    0           0      23             19
+108   6-11yrs  27      2       0    0           1      25             18
+110   6-11yrs  38      2       0    0           0      27             26
+112   6-11yrs  28      4       0    0           2      29             34
+114   6-11yrs  32      1       0    0           0      31             10
+116   6-11yrs  42      1       1    0           0      33             16
+118   6-11yrs  39      1       0    0           0      35             13
+120   6-11yrs  36      1       0    0           0      37             12
+122   6-11yrs  30      3       0    0           2      39             30
+124   6-11yrs  39      3       1    0           0      41             33
+126   6-11yrs  41      1       0    0           0      43             15
+128   12+ yrs  30      1       1    0           0      45             44
+130   12+ yrs  28      2       1    0           0      47             51
+132   12+ yrs  26      2       1    0           0      49             49
+134   12+ yrs  24      3       2    0           1      51             56
+136   12+ yrs  27      3       1    0           1      53             57
+138   12+ yrs  29      2       1    0           0      55             52
+140   12+ yrs  28      2       1    0           1      57             51
+142   12+ yrs  28      1       1    0           0      59             42
+144   12+ yrs  35      2       2    0           0      61             54
+146   12+ yrs  34      1       0    0           0      63             47
+148   12+ yrs  26      2       0    0           1      65             49
+150   12+ yrs  21      1       0    0           1      67             39
+152   12+ yrs  37      3       1    0           1      69             59
+154   12+ yrs  32      1       1    0           0      71             46
+156   12+ yrs  31      1       0    0           1      73             45
+158   12+ yrs  31      1       0    0           0      76             45
+160   12+ yrs  25      1       0    0           0      78             41
+162   12+ yrs  34      1       0    0           0      80             47
+164   12+ yrs  29      1       0    0           1      82             43
+166    0-5yrs  26      6       2    0           0       1              3
+168    0-5yrs  39      6       2    0           0       3              4
+170   6-11yrs  35      3       0    0           0       5             32
+172   6-11yrs  23      1       0    0           0       7              6
+174   6-11yrs  21      1       1    0           0       9              5
+176   6-11yrs  29      2       0    0           1      11             20
+178   6-11yrs  31      1       0    0           0      13              9
+180   6-11yrs  31      2       1    0           0      15             21
+182   6-11yrs  30      5       1    0           2      17             38
+184   6-11yrs  25      3       1    0           1      19             28
+186   6-11yrs  40      1       0    0           0      21             14
+188   6-11yrs  28      2       2    0           0      23             19
+190   6-11yrs  27      2       0    0           2      25             18
+192   6-11yrs  38      2       0    0           0      27             26
+194   6-11yrs  28      4       2    0           1      29             34
+196   6-11yrs  32      1       0    0           0      31             10
+198   6-11yrs  42      1       0    0           0      33             16
+200   6-11yrs  39      1       0    0           0      35             13
+202   6-11yrs  36      1       0    0           0      37             12
+204   6-11yrs  30      3       0    0           1      39             30
+206   6-11yrs  39      3       0    0           0      41             33
+208   6-11yrs  41      1       0    0           0      43             15
+210   12+ yrs  30      1       0    0           0      45             44
+212   12+ yrs  28      2       1    0           0      47             51
+214   12+ yrs  26      2       1    0           0      49             49
+216   12+ yrs  24      3       2    0           0      51             56
+218   12+ yrs  27      3       2    0           0      53             57
+220   12+ yrs  29      2       1    0           1      55             52
+222   12+ yrs  28      2       2    0           0      57             51
+224   12+ yrs  28      1       0    0           0      59             42
+226   12+ yrs  35      2       1    0           0      61             54
+228   12+ yrs  34      1       0    0           0      63             47
+230   12+ yrs  26      2       0    0           2      65             49
+232   12+ yrs  21      1       0    0           0      67             39
+234   12+ yrs  37      3       0    0           2      69             59
+236   12+ yrs  32      1       0    0           0      71             46
+238   12+ yrs  31      1       0    0           0      73             45
+240   12+ yrs  26      2       1    0           1      75             49
+242   12+ yrs  31      2       0    0           1      77             53
+244   12+ yrs  31      1       0    0           1      79             45
+246   12+ yrs  35      2       2    0           0      81             54
+248   12+ yrs  23      1       0    0           1      83             40
+
+$training
+    education age parity induced case spontaneous stratum pooled.stratum
+1      0-5yrs  26      6       1    1           2       1              3
+3      0-5yrs  39      6       2    1           0       3              4
+5     6-11yrs  35      3       1    1           1       5             32
+7     6-11yrs  23      1       0    1           0       7              6
+9     6-11yrs  21      1       0    1           1       9              5
+11    6-11yrs  29      2       1    1           0      11             20
+13    6-11yrs  31      1       1    1           0      13              9
+15    6-11yrs  31      2       1    1           1      15             21
+17    6-11yrs  30      5       2    1           1      17             38
+19    6-11yrs  25      3       2    1           1      19             28
+21    6-11yrs  40      1       0    1           1      21             14
+23    6-11yrs  28      2       0    1           2      23             19
+25    6-11yrs  27      2       1    1           1      25             18
+27    6-11yrs  38      2       0    1           2      27             26
+29    6-11yrs  28      4       1    1           2      29             34
+31    6-11yrs  32      1       0    1           1      31             10
+33    6-11yrs  42      1       1    1           0      33             16
+35    6-11yrs  39      1       1    1           0      35             13
+37    6-11yrs  36      1       0    1           1      37             12
+39    6-11yrs  30      3       0    1           0      39             30
+41    6-11yrs  39      3       0    1           2      41             33
+43    6-11yrs  41      1       0    1           0      43             15
+45    12+ yrs  30      1       0    1           0      45             44
+47    12+ yrs  28      2       0    1           2      47             51
+49    12+ yrs  26      2       2    1           0      49             49
+51    12+ yrs  24      3       1    1           2      51             56
+53    12+ yrs  27      3       1    1           1      53             57
+55    12+ yrs  29      2       0    1           2      55             52
+57    12+ yrs  28      2       1    1           0      57             51
+59    12+ yrs  28      1       0    1           1      59             42
+61    12+ yrs  35      2       0    1           2      61             54
+63    12+ yrs  34      1       0    1           1      63             47
+65    12+ yrs  26      2       1    1           0      65             49
+67    12+ yrs  21      1       0    1           1      67             39
+69    12+ yrs  37      3       0    1           2      69             59
+71    12+ yrs  32      1       1    1           0      71             46
+73    12+ yrs  31      1       0    1           1      73             45
+75    12+ yrs  26      2       0    1           2      75             49
+77    12+ yrs  31      2       0    1           1      77             53
+79    12+ yrs  31      1       0    1           1      79             45
+81    12+ yrs  35      2       2    1           0      81             54
+83    12+ yrs  23      1       0    1           1      83             40
+85     0-5yrs  42      1       0    0           0       2              1
+87     0-5yrs  34      4       0    0           1       4              2
+89    6-11yrs  36      4       1    0           1       6             36
+91    6-11yrs  32      2       2    0           0       8             22
+93    6-11yrs  28      2       0    0           1      10             19
+95    6-11yrs  37      4       1    0           1      12             37
+97    6-11yrs  29      3       0    0           1      14             29
+99    6-11yrs  27      2       1    0           0      16             18
+101   6-11yrs  26      1       0    0           0      18              7
+103   6-11yrs  44      1       0    0           0      20             17
+105   6-11yrs  35      2       0    0           0      22             24
+107   6-11yrs  36      1       0    0           0      24             12
+109   6-11yrs  40      2       0    0           0      26             27
+111   6-11yrs  34      3       0    0           0      28             31
+113   6-11yrs  30      4       1    0           1      30             35
+115   6-11yrs  34      2       1    0           0      32             23
+117   6-11yrs  32      2       0    0           0      34             22
+119   6-11yrs  35      2       0    0           0      36             24
+121   6-11yrs  34      3       2    0           0      38             31
+123   6-11yrs  28      1       1    0           0      40              8
+125   6-11yrs  35      1       0    0           0      42             11
+127   6-11yrs  37      2       0    0           0      44             25
+129   12+ yrs  37      1       0    0           0      46             48
+131   12+ yrs  27      4       2    0           1      48             61
+133   12+ yrs  38      3       1    0           0      50             60
+135   12+ yrs  36      5       1    0           1      52             62
+137   12+ yrs  28      1       1    0           0      54             42
+139   12+ yrs  36      2       1    0           0      56             55
+141   12+ yrs  28      2       2    0           0      58             51
+143   12+ yrs  27      2       1    0           0      60             50
+145   12+ yrs  25      1       1    0           0      62             41
+147   12+ yrs  31      2       0    0           0      64             53
+149   12+ yrs  32      1       0    0           0      66             46
+151   12+ yrs  28      3       2    0           0      68             58
+153   12+ yrs  25      1       0    0           0      70             41
+155   12+ yrs  25      1       0    0           0      72             41
+157   12+ yrs  26      2       0    0           2      75             49
+159   12+ yrs  31      2       2    0           0      77             53
+161   12+ yrs  31      1       0    0           0      79             45
+163   12+ yrs  35      2       0    0           0      81             54
+165   12+ yrs  23      1       0    0           1      83             40
+167    0-5yrs  42      1       0    0           0       2              1
+169    0-5yrs  34      4       0    0           2       4              2
+171   6-11yrs  36      4       0    0           2       6             36
+173   6-11yrs  32      2       0    0           1       8             22
+175   6-11yrs  28      2       0    0           1      10             19
+177   6-11yrs  37      4       0    0           1      12             37
+179   6-11yrs  29      3       0    0           2      14             29
+181   6-11yrs  27      2       0    0           0      16             18
+183   6-11yrs  26      1       1    0           0      18              7
+185   6-11yrs  44      1       1    0           0      20             17
+187   6-11yrs  35      2       0    0           0      22             24
+189   6-11yrs  36      1       0    0           1      24             12
+191   6-11yrs  40      2       0    0           0      26             27
+193   6-11yrs  34      3       0    0           0      28             31
+195   6-11yrs  30      4       1    0           1      30             35
+197   6-11yrs  34      2       0    0           0      32             23
+199   6-11yrs  32      2       2    0           0      34             22
+201   6-11yrs  35      2       0    0           0      36             24
+203   6-11yrs  34      3       2    0           0      38             31
+205   6-11yrs  28      1       0    0           0      40              8
+207   6-11yrs  35      1       0    0           0      42             11
+209   6-11yrs  37      2       0    0           0      44             25
+211   12+ yrs  37      1       0    0           1      46             48
+213   12+ yrs  27      4       2    0           0      48             61
+215   12+ yrs  38      3       1    0           0      50             60
+217   12+ yrs  36      5       2    0           1      52             62
+219   12+ yrs  28      1       0    0           1      54             42
+221   12+ yrs  36      2       0    0           1      56             55
+223   12+ yrs  28      2       1    0           0      58             51
+225   12+ yrs  27      2       1    0           0      60             50
+227   12+ yrs  25      1       1    0           0      62             41
+229   12+ yrs  31      2       1    0           0      64             53
+231   12+ yrs  32      1       1    0           0      66             46
+233   12+ yrs  28      3       2    0           0      68             58
+235   12+ yrs  25      1       1    0           0      70             41
+237   12+ yrs  25      1       1    0           0      72             41
+239   12+ yrs  38      6       0    0           2      74             63
+241   12+ yrs  31      1       1    0           0      76             45
+243   12+ yrs  25      1       0    0           1      78             41
+245   12+ yrs  34      1       0    0           0      80             47
+247   12+ yrs  29      1       0    0           1      82             43
+
+> tree <- rpart(Species ~ ., splitData$training)
+Błąd w poleceniu 'eval(predvars, data, env)':nie znaleziono obiektu 'Species'
+> tree <- rpart(education ~ ., splitData$training)
+> tree
+n= 124 
+
+node), split, n, loss, yval, (yprob)
+      * denotes terminal node
+
+1) root 124 64 6-11yrs (0.04838710 0.48387097 0.46774194)  
+  2) stratum< 44.5 66  6 6-11yrs (0.09090909 0.90909091 0.00000000)  
+    4) stratum< 5.5 7  1 0-5yrs (0.85714286 0.14285714 0.00000000) *
+    5) stratum>=5.5 59  0 6-11yrs (0.00000000 1.00000000 0.00000000) *
+  3) stratum>=44.5 58  0 12+ yrs (0.00000000 0.00000000 1.00000000) *
+> table(infert$type)
+< table of extent 0 >
+> tree <- C5.0(train[1:500, -5], train[1:500, 5])
+BŁĄD: C5.0 models require a factor outcome
+> tree <- C5.0(train[1:500, -1], train[1:500, 1])
+> summary(tree)
+
+Call:
+C5.0.default(x = train[1:500, -1], y = train[1:500, 1])
+
+
+C5.0 [Release 2.07 GPL Edition]         Tue May 16 18:01:22 2023
+-------------------------------
+
+Class specified by attribute `outcome'
+*** ignoring cases with bad or unknown class
+
+Read 248 cases (8 attributes) from undefined.data
+
+Decision tree:
+
+pooled.stratum > 38: 12+ yrs (116)
+pooled.stratum <= 38:
+:...pooled.stratum <= 4: 0-5yrs (12)
+    pooled.stratum > 4: 6-11yrs (120)
+
+
+Evaluation on training data (248 cases):
+
+            Decision Tree   
+          ----------------  
+          Size      Errors  
+
+             3    0( 0.0%)   <<
+
+
+           (a)   (b)   (c)    <-classified as
+          ----  ----  ----
+            12                (a): class 0-5yrs
+                 120          (b): class 6-11yrs
+                       116    (c): class 12+ yrs
+
+
+        Attribute usage:
+
+        100.00% pooled.stratum
+
+
+Time: 0.0 secs
+
+> plot(tree)
+> 
+> 
